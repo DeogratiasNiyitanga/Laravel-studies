@@ -137,6 +137,6 @@ Route::get('localization', function () {
 
 // ===============================
 
-// GET LIST FROM DATABASE TO HTML FORM 
+// GET LIST FROM DATABASE TO HTML FORM AND PAGINATION
 // set route on controller which remders view 
 Route::get('memberlistfromdb', [memberListFromDb::class, 'showMembers']);

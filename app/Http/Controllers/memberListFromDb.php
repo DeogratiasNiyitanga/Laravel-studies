@@ -11,7 +11,7 @@ class memberListFromDb extends Controller
     //
     public function showMembers()
     {
-        $data = Member::all();
+        $data = Member::paginate(2);
         return view('membersfromdb', ['members' => $data]);
     }
 }

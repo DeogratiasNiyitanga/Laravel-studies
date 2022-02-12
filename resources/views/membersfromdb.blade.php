@@ -25,7 +25,12 @@
             @endforeach
             
         </table><br>
+        <span>{{$members->links()}}</span><br>
  
   <a href="/contact"><button>Back to home</button></a>
         </div>
-    
+    <style>
+        .w-5{
+            width: 2em;height:2em;
+        }
+    </style>
