@@ -9,7 +9,8 @@
             @endforeach
         </div><hr> --}}
         @include('login')
-       
+      <br>
+      <a href="/contact"><button>Back to home</button></a> 
 </fieldset>
 
 {{-- @csrf

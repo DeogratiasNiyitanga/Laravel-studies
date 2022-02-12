@@ -5,6 +5,7 @@ use App\Http\Controllers\Users;
 use App\Http\Controllers\memberRegistration;
 use App\Http\Controllers\fileUploadController;
 use App\Http\Controllers\memberListFromDb;
+use App\Http\Controllers\SaveDataToDbController;
 // use App\Http\Controllers\Studies;
 use App\Http\Controllers\UserHttpCleintController;
 
@@ -140,3 +141,12 @@ Route::get('localization', function () {
 // GET LIST FROM DATABASE TO HTML FORM AND PAGINATION
 // set route on controller which remders view 
 Route::get('memberlistfromdb', [memberListFromDb::class, 'showMembers']);
+
+
+// =======================================
+
+// SAVE DATA TO DATABASE 
+// View route 
+Route::view('savememberform', 'savemember');
+// controller route 
+Route::post('savedatatodb', [SaveDataToDbController::class, 'saveData']);
