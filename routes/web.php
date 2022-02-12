@@ -138,9 +138,10 @@ Route::get('localization', function () {
 
 // ===============================
 
-// GET LIST FROM DATABASE TO HTML FORM AND PAGINATION
+// GET LIST FROM DATABASE TO HTML FORM AND PAGINATION WITH EDIT AND DELETE OPTION
 // set route on controller which remders view 
 Route::get('memberlistfromdb', [memberListFromDb::class, 'showMembers']);
+Route::get('delete/{me_id}', [memberListFromDb::class, 'deleteMember']);
 
 
 // =======================================

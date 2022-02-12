@@ -14,4 +14,11 @@ class memberListFromDb extends Controller
         $data = Member::paginate(2);
         return view('membersfromdb', ['members' => $data]);
     }
+
+    public function deleteMember($me_id)
+    {
+        $data = Member::find($me_id);
+        $data->delete();
+        return redirect('memberlistfromdb');
+    }
 }

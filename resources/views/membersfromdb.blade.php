@@ -8,7 +8,7 @@
                 <td>Last name</td>
                 <td>Email</td>
                 <td>Phone number</td>
-                <td><center><a href="#">ACTION</a></center></td>
+                <td><center><a href="#" style="text-decoration: none">OPERATION</a></center></td>
             </tr>
             <?php $i=1;?>
             @foreach ($members as $item)
@@ -18,7 +18,10 @@
                     <td>{{$item['lname']}}</td>
                     <td>{{$item['email']}}</td>
                     <td>{{$item['phone']}}</td>
-                    <td><center><a href="edit?id={{$item['me_id']}}">Edit</a></center></td>
+                    <td><center><a href={{"edit/".$item['me_id']}} style="text-decoration: none;color:green;">Edit</a>
+                    &nbsp;&nbsp;<a href={{"delete/".$item['me_id']}} style="text-decoration: none;color:red;">Delete</a></center></td>
+                  
+
 
                 </tr>
                 <?php $i++?>
