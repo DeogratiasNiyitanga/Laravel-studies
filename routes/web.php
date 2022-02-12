@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Users;
 use App\Http\Controllers\memberRegistration;
 use App\Http\Controllers\fileUploadController;
+use App\Http\Controllers\memberListFromDb;
 // use App\Http\Controllers\Studies;
 use App\Http\Controllers\UserHttpCleintController;
 
@@ -133,3 +134,9 @@ Route::post('fileUpload', [fileUploadController::class, 'uploadFile']);
 Route::get('localization', function () {
     return view('localization');
 });
+
+// ===============================
+
+// GET LIST FROM DATABASE TO HTML FORM 
+// set route on controller which remders view 
+Route::get('memberlistfromdb', [memberListFromDb::class, 'showMembers']);
